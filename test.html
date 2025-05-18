@@ -1,0 +1,111 @@
+<style>
+
+input{
+    padding: 20px;
+    border-radius: 10px;
+    border:1px solid #bbb;
+    width:100%;
+    outline:none;
+}
+
+.loginForm{
+    border:1px solid #bbb;
+    width: 400px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+button:hover{
+background: rgb(4, 67, 110); 
+transition: 0.5s;
+}
+
+button{
+    border-radius:10px;
+    padding: 15px;
+    width:100%;
+    border:none;
+    background: rgb(3, 111, 182);
+    color:#fff;
+    font-size: 17px;
+    cursor:pointer;
+    transition: 0.5s;
+}
+
+h1{
+    text-align: center;
+    margin-top: -10px;
+    font-family: cursive;
+}
+
+#errorBox{
+    background:rgb(247, 58, 58);
+    padding: 15px;
+    border-radius: 10px;
+    color:#fff;
+    text-align: center;
+    font-family: arial;
+    margin-bottom: 10px;
+}
+#successBox{
+    background:rgb(40, 196, 139);
+    padding: 15px;
+    border-radius: 10px;
+    color:#fff;
+    text-align: center;
+    font-family: arial;
+    margin-bottom: 10px;
+}
+
+#errorBox #closeBox:hover{
+transition: 0.5s;
+color: rgb(249, 188, 188);
+}
+
+#SuccessBox #sCloseBox:hover{
+transition: 0.5s;
+color: rgb(188, 249, 207);
+}
+
+#errorBox #closeBox, #sCloseBox{
+    float: right;
+    font-size: 25px;
+    margin-top: -5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+</style>
+
+
+
+<form class="loginForm">
+
+<h1>Age Validator</h1>
+
+<div id="errorBox" class="hide">
+    <span id="errText"></span>
+    <span id="closeBox">&times;</span>
+</div>
+
+<div id="successBox" class="hide">
+    <span id="successText"></span>
+    <span id="sCloseBox">&times;</span>
+</div>
+
+<input type="text" id="age" name="age" placeholder="Enter Age">
+
+<p>
+<button type="submit" id="submit">Validate</button>
+
+</form>
+
+
+
+
+<script src="script.js"></script>
